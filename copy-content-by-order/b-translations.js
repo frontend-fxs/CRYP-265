@@ -1,4 +1,3 @@
-(function() {
 	var translations = {
 		Active: 'ACTIVE',
 		Upcoming: 'UPCOMING',
@@ -15,4 +14,3 @@
 		Website: 'Website',
 		Report: 'Report',
 	};
-});
