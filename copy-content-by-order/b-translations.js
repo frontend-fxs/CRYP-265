@@ -1,7 +1,7 @@
 var translations =  {
 		Active: 'ACTIVE',
 		Upcoming: 'UPCOMING',
-        Active: 'ACTIVE',
+        Recent: 'RECENT',
         ListYourIco: 'List your ICO',
         Ico: 'ICO',
         TimeLeft: 'TIME LEFT',
