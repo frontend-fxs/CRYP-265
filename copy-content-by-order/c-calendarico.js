@@ -3,10 +3,13 @@ var dinamicVars = {};
 var initDinamicVars = function() {
 	dinamicVars.Translations = translations;
 };
-
-$('#target').load('copy-content-by-order/d-mustache.html #template1', function() {
+$(document).ready(function() {
 	initDinamicVars();
-	var template = document.getElementById('template1').innerHTML;
+	$.get('copy-content-by-order/d-mustache.html', function(template) {
+		var rendered = Mustache.render(template, dinamicVars);
+		$('#target').html(rendered);
+	});
+	var template = $('#icoCalendarTemplate').html();
 	var output = Mustache.render(template, dinamicVars);
 	$('#icoCalendar').html(output);
 });
