@@ -1,15 +1,22 @@
 var dinamicVars = {};
-
+var htmlTemplateFile = 'copy-content-by-order/d-mustache.html';
 var initDinamicVars = function() {
 	dinamicVars.Translations = translations;
 };
+
+	var htmlRender = function(jsonData) {
+		FXStreet.Util.loadHtmlTemplate(htmlTemplateFile).done(function(template) {
+			var rendered = FXStreet.Util.renderByHtmlTemplate(template, jsonData);
+			$('#icoCalendar').append(rendered);
+		});
+	};
+
+
 $(document).ready(function() {
 	initDinamicVars();
-	$.get('copy-content-by-order/d-mustache.html', function(template) {
-		var rendered = Mustache.render(template, dinamicVars);
-		$('#target').html(rendered);
-	});
-	var template = $('#icoCalendarTemplate').html();
-	var output = Mustache.render(template, dinamicVars);
-	$('#icoCalendar').html(output);
+	htmlRender(dinamicVars);
 });
+
+
+
+		
