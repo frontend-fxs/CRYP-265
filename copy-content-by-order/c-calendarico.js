@@ -1,8 +1,9 @@
-var dinamicVars = {};
-var htmlTemplateFile = 'copy-content-by-order/d-mustache.html';
-var initDinamicVars = function() {
-	dinamicVars.Translations = translations;
-};
+$(document).ready(function() {
+	var dinamicVars = {};
+	var htmlTemplateFile = 'copy-content-by-order/d-mustache.html';
+	var initDinamicVars = function() {
+		dinamicVars.Translations = translations;
+	};
 
 	var htmlRender = function(jsonData) {
 		FXStreet.Util.loadHtmlTemplate(htmlTemplateFile).done(function(template) {
@@ -11,12 +12,6 @@ var initDinamicVars = function() {
 		});
 	};
 
-
-$(document).ready(function() {
 	initDinamicVars();
 	htmlRender(dinamicVars);
 });
-
-
-
-		
