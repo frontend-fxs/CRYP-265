@@ -5,13 +5,19 @@
 		dinamicVars.Translations = translations;
 	};
 
-	var htmlRender = function(jsonData) {
-		FXStreet.Util.loadHtmlTemplate(htmlTemplateFile).done(function(template) {
-			var rendered = FXStreet.Util.renderByHtmlTemplate(template, jsonData);
-			$('#icoCalendar').append(rendered);
-		});
+	var htmlRender = function() {
+		initDinamicVars();
+		if (FXStreet) {
+			FXStreet.Util.loadHtmlTemplate(htmlTemplateFile).done(function(template) {
+				var rendered = FXStreet.Util.renderByHtmlTemplate(template, dinamicVars);
+				$('#icoCalendar').append(rendered);
+			});
+		}else{
+			setTimeout(() => {
+				htmlRender();
+			}, 1000);
+		}
 	};
 
-	initDinamicVars();
-	htmlRender(dinamicVars);
+	htmlRender();
 });
