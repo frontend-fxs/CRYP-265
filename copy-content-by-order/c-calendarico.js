@@ -1,4 +1,4 @@
-$(document).ready(function() {
+(function() {
 	var dinamicVars = {};
 	var htmlTemplateFile = 'copy-content-by-order/d-mustache.html';
 	var initDinamicVars = function() {
