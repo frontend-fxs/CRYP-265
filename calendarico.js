@@ -1,6 +1,5 @@
-document.addEventListener('load',function(){
-  alert('document load');
-});
-$(document).ready(function(){
-  alert('jQuery load');
-});
+var view = {
+        name : "Joe",
+        occupation : "Web Developer"
+      };
+
