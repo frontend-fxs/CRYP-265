@@ -6,9 +6,12 @@ var initDinamicVars = function() {
 
 var htmlRender = function() {
 	initDinamicVars();
-	FXStreet.Util.loadHtmlTemplate(htmlTemplateFile).done(function(template) {
-		var rendered = FXStreet.Util.renderByHtmlTemplate(template, dinamicVars);
-		$('#icoCalendar').append(rendered);
+	
+	
+	$('#target').load('d-mustache.html #icoCalendarTemplate', function() {
+		var template = document.getElementById('icoCalendarTemplate').innerHTML;
+		var output = Mustache.render(template, dinamicVars);
+		$('#icoCalendar').html(output);
 	});
 };
 
