@@ -1,4 +1,11 @@
-var dinamicVars = {};
+var dinamicVars = {
+	Icos: {
+		Active: [],
+		Upcoming: [],
+		Recent:[]
+	},
+	Translations:{}
+};
 var htmlTemplateFile = 'copy-content-by-order/d-mustache.html';
 
 var IsEndedIco = function(ico) {
@@ -20,7 +27,7 @@ var getUpcomingIcos = function() {
 };
 
 var getRecentIcos = function() {
-	dinamicVars.Icos.Upcoming = icos.filter(ico => IsEndedIco(ico) && IsStartedIco(ico));
+	dinamicVars.Icos.Recent = icos.filter(ico => IsEndedIco(ico) && IsStartedIco(ico));
 };
 
 var filterIcosByDate = function() {
