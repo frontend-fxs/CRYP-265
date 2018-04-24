@@ -1,7 +1,51 @@
 <script id="icoCalendarTemplate" type="x-tmpl-mustache">
     {{Translations.Active}} 
+
+        {{#Icos.Active}}
+
+            {{name}}
+            {{image}}
+            {{partnership}}
+            {{ICOWeb}}
+            {{ICOReport}}
+            {{FXPage}}
+            {{startDate}}
+            {{endDate}}
+            {{exchangeDate}}
+            {{description}}
+            
+        {{/Icos.Active}}
+
     {{Translations.Upcoming}} 
+
+        {{#Icos.Upcoming}}
+            {{name}}
+            {{image}}
+            {{partnership}}
+            {{ICOWeb}}
+            {{ICOReport}}
+            {{FXPage}}
+            {{startDate}}
+            {{endDate}}
+            {{exchangeDate}}
+            {{description}}
+        {{/Icos.Upcoming}}
+
     {{Translations.Recent}} 
+
+        {{#Icos.Upcoming}}
+            {{name}}
+            {{image}}
+            {{partnership}}
+            {{ICOWeb}}
+            {{ICOReport}}
+            {{FXPage}}
+            {{startDate}}
+            {{endDate}}
+            {{exchangeDate}}
+            {{description}}
+        {{/Icos.Upcoming}}
+    
     {{Translations.ListYourIco}} 
     {{Translations.Ico}} 
     {{Translations.TimeLeft}} 
