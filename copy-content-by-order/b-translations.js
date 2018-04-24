@@ -5,6 +5,7 @@
 		ListYourIco: 'List your ICO',
 		Ico: 'ICO',
 		TimeLeft: 'TIME LEFT',
+		ReleaseIn: 'RELEASE IN',
 		Window: 'WINDOW',
 		Description: 'DESCRIPTION',
 		Platinum: 'PLATINUM',
