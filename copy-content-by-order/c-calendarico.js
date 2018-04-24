@@ -8,7 +8,7 @@ var htmlRender = function() {
 	initDinamicVars();
 	
 	
-	$('#target').load('copy-content-by-order/d-mustache.html #icoCalendarTemplate', function() {
+	$('#target').load('copy-content-by-order/d-mustache.html', function() {
 		var template = document.getElementById('icoCalendarTemplate').innerHTML;
 		var output = Mustache.render(template, dinamicVars);
 		$('#icoCalendar').html(output);
