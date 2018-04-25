@@ -16,19 +16,19 @@
 	width: 100%;
 	text-align: center;
 }
-.fxs_calendarico .fxs_partnership.fxs_platinum {
+.fxs_calendarico p.fxs_partnership.fxs_platinum {
 	background-color: #49494f;
 }
 
-.fxs_calendarico .fxs_partnership.fxs_gold {
+.fxs_calendarico p.fxs_partnership.fxs_gold {
 	background-color: #f5c861;
 }
 
-.fxs_calendarico .fxs_partnership.fxs_silver {
+.fxs_calendarico p.fxs_partnership.fxs_silver {
 	background-color: #a3a3a8;
 }
 
-.fxs_calendarico .fxs_partnership.fxs_bronze {
+.fxs_calendarico p.fxs_partnership.fxs_bronze {
 	background-color: #e4871b;
 }
 
@@ -38,7 +38,11 @@
 .fxs_calendarico td {
 	padding: 20px;
 }
+.fxs_calendarico td.fxs_partnership{
+	width: 100px;
+	text-align: center;
 
+}
 .fxs_calendarico .fxs_ico_image {
 	vertical-align: middle;
 	width: 100px;
