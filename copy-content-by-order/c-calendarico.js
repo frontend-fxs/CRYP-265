@@ -149,6 +149,9 @@ var updateIcosRaw = function() {
 var updateDinamicVars = function() {
 	updateIcosRaw();
 	filterIcosByDate();
+	console.log(icosRaw);
+	console.log(icos);
+	console.log(dinamicVars);
 };
 
 var initDinamicVars = function() {
