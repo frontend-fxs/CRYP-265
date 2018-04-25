@@ -4,7 +4,7 @@
 	float: left;
 }
 
-.fxs_partnership {
+.fxs_calendarico .fxs_partnership {
 	transform: rotate(-90deg);
 	color: white;
 	margin: 1px 5px 0 0;
@@ -13,31 +13,33 @@
 	font-weight: 500;
 	font-style: italic;
 }
-
-.fxs_partnership.fxs_platinum {
+.fxs_calendarico .fxs_partnership.fxs_platinum {
 	background-color: #1b1c23;
 }
 
-.fxs_partnership.fxs_gold {
+.fxs_calendarico .fxs_partnership.fxs_gold {
 	background-color: #e4871b;
 }
 
-.fxs_partnership.fxs_silver {
+.fxs_calendarico .fxs_partnership.fxs_silver {
 	background-color: #a3a3a8;
 }
 
-.fxs_partnership.fxs_bronze {
+.fxs_calendarico .fxs_partnership.fxs_bronze {
 	background-color: #f5c861;
 }
 
-tr:nth-child(even) {
+.fxs_calendarico tr:nth-child(even) {
 	background-color: #f3f3f8;
 }
+.fxs_calendarico td {
+	padding:20px;
+}
 
-.fxs_ico_image{
+.fxs_calendarico .fxs_ico_image{
 vertical-align: middle;
 }
-.fxs_ico_image img{
+.fxs_calendarico .fxs_ico_image img{
 	width: 100px;
 	height: 100px;
 }
