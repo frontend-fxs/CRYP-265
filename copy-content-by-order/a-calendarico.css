@@ -52,7 +52,7 @@
 .fxs_calendarico .fxs_ico_image img {
 	width: 100px;
 	height: 100px;
-	margin: 10px;
+	margin: 10px 0;
 }
 .fxs_calendarico .fa-diamond:before {
 	color: #e4871b;
