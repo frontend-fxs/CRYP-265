@@ -54,6 +54,7 @@
 	height: .9rem;
 	border: 1px solid #304c70;
 	display: block;
+	overflow: hidden;
 }
 
 .fxs_calendarico .fxs_progressbar span {
