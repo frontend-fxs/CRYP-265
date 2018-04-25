@@ -107,58 +107,79 @@ var filterIcosByDate = function() {
 	getRecentIcos();
 };
 
-var createPartnershipIcons = function(ico){
-		ico.PartnershipIcons = [];
-		for (let index = 1; index < ico.PartnershipLevel; index++) {
-			ico.PartnershipIcons.push(index);
-		}
-		return ico;
-}
+var createPartnershipIcons = function(ico) {
+	ico.PartnershipIcons = [];
+	for (let index = 1; index < ico.PartnershipLevel; index++) {
+		ico.PartnershipIcons.push(index);
+	}
+	return ico;
+};
+
+var initTimeVars = function(ico) {
+	ico.StartDate = new Date(ico.StartDate.Year, ico.StartDate.Month - 1, ico.StartDate.Day);
+	ico.MillisecondsToStart = !isStartedIco(ico) && ico.StartDate.getTime() - dinamicVars.Now.getTime();
+	ico.EndDate = new Date(ico.EndDate.Year, ico.EndDate.Month - 1, ico.EndDate.Day);
+	ico.MillisecondsToClose =
+		!isEndedIco(ico) && isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
+	ico.MillisecondsDuration = ico.MillisecondsToClose - ico.MillisecondsToStart;
+	ico.MillisecondsElapsed = dinamicVars.Now.getTime() - ico.MillisecondsToStart;
+	return ico;
+};
+
+var calculateProgress = function(ico) {
+	ico.Progress = ico.MillisecondsElapsed * 100 / ico.MillisecondsDuration;
+	return ico;
+};
+
+var calculateStartCountDown = function(ico) {
+	ico.StartCountDownDays = parseInt(ico.MillisecondsToStart / (1000 * 60 * 60 * 24));
+	ico.MillisecondsToStart -= ico.StartCountDownDays * 1000 * 60 * 60 * 24;
+	ico.StartCountDownHours = parseInt(ico.MillisecondsToStart / (1000 * 60 * 60));
+	ico.MillisecondsToStart -= ico.StartCountDownHours * 1000 * 60 * 60;
+	ico.StartCountDownMinutes = parseInt(ico.MillisecondsToStart / (1000 * 60));
+	ico.MillisecondsToStart -= ico.StartCountDownMinutes * 1000 * 60;
+	ico.StartCountDown = ico.StartCountDownDays + ':' + ico.StartCountDownHours + ':' + ico.StartCountDownMinutes;
+	return ico;
+};
+
+var calculateCloseCountDown = function(ico) {
+	ico.CloseCountDownDays = parseInt(ico.MillisecondsToClose / (1000 * 60 * 60 * 24));
+	ico.MillisecondsToClose -= ico.CloseCountDownDays * 1000 * 60 * 60 * 24;
+	ico.CloseCountDownHours = parseInt(ico.MillisecondsToClose / (1000 * 60 * 60));
+	ico.MillisecondsToClose -= ico.CloseCountDownHours * 1000 * 60 * 60;
+	ico.CloseCountDownMinutes = parseInt(ico.MillisecondsToClose / (1000 * 60));
+	ico.MillisecondsToClose -= ico.CloseCountDownMinutes * 1000 * 60;
+	ico.CloseCountDown = ico.CloseCountDownDays + ':' + ico.CloseCountDownHours + ':' + ico.CloseCountDownMinutes;
+	return ico;
+};
+
+var formatStartDateToLocale = function(ico) {
+	ico.StartDateLocale = ico.StartDate.toLocaleDateString('en-EN', {
+		day: 'numeric',
+		month: 'numeric',
+		year: 'numeric',
+	});
+	return ico;
+};
+
+var formatEndDateToLocale = function(ico) {
+	ico.EndDateLocale = ico.EndDate.toLocaleDateString('en-EN', {
+		day: 'numeric',
+		month: 'numeric',
+		year: 'numeric',
+	});
+	return ico;
+};
 
 var updateIcosRaw = function() {
 	icos = icosRaw.map(function(ico) {
-		
 		createPartnershipIcons(ico);
-
-		ico.StartDate = new Date(ico.StartDate.Year, ico.StartDate.Month - 1, ico.StartDate.Day);
-		ico.EndDate = new Date(ico.EndDate.Year, ico.EndDate.Month - 1, ico.EndDate.Day);
-
-		ico.MillisecondsToStart = !isStartedIco(ico) && ico.StartDate.getTime() - dinamicVars.Now.getTime();
-		ico.MillisecondsToClose =
-			!isEndedIco(ico) && isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
-
-		ico.MillisecondsDuration = ico.MillisecondsToClose - ico.MillisecondsToStart;
-		ico.MillisecondsElapsed = dinamicVars.Now.getTime() - ico.MillisecondsToStart;
-
-		ico.Progress = ico.MillisecondsElapsed * 100 / ico.MillisecondsDuration;
-
-		ico.StartCountDownDays = parseInt(ico.MillisecondsToStart / (1000 * 60 * 60 * 24));
-		ico.MillisecondsToStart -= ico.StartCountDownDays * 1000 * 60 * 60 * 24;
-		ico.StartCountDownHours = parseInt(ico.MillisecondsToStart / (1000 * 60 * 60));
-		ico.MillisecondsToStart -= ico.StartCountDownHours * 1000 * 60 * 60;
-		ico.StartCountDownMinutes = parseInt(ico.MillisecondsToStart / (1000 * 60));
-		ico.MillisecondsToStart -= ico.StartCountDownMinutes * 1000 * 60;
-		ico.StartCountDown = ico.StartCountDownDays + ':' + ico.StartCountDownHours + ':' + ico.StartCountDownMinutes;
-
-		ico.CloseCountDownDays = parseInt(ico.MillisecondsToClose / (1000 * 60 * 60 * 24));
-		ico.MillisecondsToClose -= ico.CloseCountDownDays * 1000 * 60 * 60 * 24;
-		ico.CloseCountDownHours = parseInt(ico.MillisecondsToClose / (1000 * 60 * 60));
-		ico.MillisecondsToClose -= ico.CloseCountDownHours * 1000 * 60 * 60;
-		ico.CloseCountDownMinutes = parseInt(ico.MillisecondsToClose / (1000 * 60));
-		ico.MillisecondsToClose -= ico.CloseCountDownMinutes * 1000 * 60;
-		ico.CloseCountDown = ico.CloseCountDownDays + ':' + ico.CloseCountDownHours + ':' + ico.CloseCountDownMinutes;
-
-		ico.StartDateLocale = ico.StartDate.toLocaleDateString('en-EN', {
-			day: 'numeric',
-			month: 'numeric',
-			year: 'numeric',
-		});
-		ico.EndDateLocale = ico.EndDate.toLocaleDateString('en-EN', {
-			day: 'numeric',
-			month: 'numeric',
-			year: 'numeric',
-		});
-
+		initTimeVars(ico);
+		calculateProgress(ico);
+		calculateStartCountDown(ico);
+		calculateCloseCountDown(ico);
+		formatStartDateToLocale(ico);
+		formatEndDateToLocale(ico);
 		return ico;
 	});
 };
