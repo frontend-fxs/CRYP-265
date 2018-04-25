@@ -3,6 +3,9 @@
 	clear: both;
 	float: left;
 }
+.fxs_calendarico .fxs_table>tbody>tr>td {
+	padding: 20px 0 10px 0;
+}
 .fxs_calendarico .fxs_table>tbody>tr>td:first-child {
 	width: 0.1rem;
 	position: relative;
@@ -37,9 +40,7 @@
 .fxs_calendarico tr:nth-child(even) {
 	background-color: #f3f3f8;
 }
-.fxs_calendarico .fxs_table>tbody>tr>td {
-	padding: 0 10px;
-}
+
 .fxs_calendarico td.fxs_partnership{
 	width: 120px;
 	text-align: center;
