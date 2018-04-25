@@ -3,6 +3,9 @@
 	clear: both;
 	float: left;
 }
+.fxs_calendarico tr:nth-child(even) {
+	background-color: #f3f3f8;
+}
 .fxs_calendarico .fxs_table>tbody>tr>td {
 	padding: 20px 10px 10px 10px;
 }
@@ -21,6 +24,23 @@
 	text-align: center;
 	margin:0;
 }
+.fxs_calendarico .fxs_table>tbody>tr>td.fxs_partnership{
+	width: 120px;
+	text-align: center;
+
+}
+.fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image {
+	vertical-align: middle;
+	width: 120px;
+}
+.fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image img {
+	width: 100px;
+	height: 100px;
+	margin: 10px 0;
+}
+.fxs_calendarico .fxs_table>tbody>tr>td.fxs_countdown{
+	width:120px;
+}
 .fxs_calendarico p.fxs_partnership.fxs_platinum {
 	background-color: #49494f;
 }
@@ -37,24 +57,9 @@
 	background-color: #e4871b;
 }
 
-.fxs_calendarico tr:nth-child(even) {
-	background-color: #f3f3f8;
-}
 
-.fxs_calendarico td.fxs_partnership{
-	width: 120px;
-	text-align: center;
 
-}
-.fxs_calendarico .fxs_ico_image {
-	vertical-align: middle;
-	width: 120px;
-}
-.fxs_calendarico .fxs_ico_image img {
-	width: 100px;
-	height: 100px;
-	margin: 10px 0;
-}
+
 .fxs_calendarico .fa-diamond:before {
 	color: #e4871b;
 }
