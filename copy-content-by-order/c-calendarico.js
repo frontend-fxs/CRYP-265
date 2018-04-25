@@ -1,6 +1,34 @@
 var htmlTemplateFile = 'copy-content-by-order/d-mustache.html';
 var icos = [];
 
+var randomIcosRaw = function() {
+	for (var i = 0; i < 1000; i++) {
+		icosRaw.push({
+			PartnershipLevel: Math.floor(Math.random() * 5) + 1,
+			Name: 'Votem',
+			Description: 'Voting for a mobile world',
+			StartDate: {
+				Year: Math.floor(Math.random() * 2100),
+				Month: Math.floor(Math.random() * 12),
+				Day: Math.floor(Math.random() * 28),
+			},
+			EndDate: {
+				Year: Math.floor(Math.random() * 2100),
+				Month: Math.floor(Math.random() * 12),
+				Day: Math.floor(Math.random() * 28),
+			},
+			ImageUrl: 'https://tokenmarket.net/blockchain-static/ethereum/assets/votem/logo_small.png',
+			ICOWeb: 'https://www.votem.io/',
+			ICOReport: 'https://votem.com/our-story/',
+			FXPage: 'https://www.fxstreet.com/',
+		});
+	}
+
+	return icosRaw;
+};
+
+randomIcosRaw();
+
 var dinamicVars = {
 	Icos: {
 		Active: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] },
