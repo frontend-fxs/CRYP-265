@@ -27,7 +27,6 @@ var randomIcosRaw = function() {
 	return icosRaw;
 };
 
-randomIcosRaw();
 
 var dinamicVars = {
 	Icos: {
@@ -227,6 +226,7 @@ var initDinamicVars = function() {
 };
 
 var htmlRender = function() {
+	randomIcosRaw();
 	initDinamicVars();
 	$('#target').load(htmlTemplateFile, function() {
 		var template = document.getElementById('icoCalendarTemplate').innerHTML;
