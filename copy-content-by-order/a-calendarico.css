@@ -3,16 +3,21 @@
 	clear: both;
 	float: left;
 }
-
+.fxs_calendarico  td:first-child{
+	width:2rem;
+	height: 130px;
+	position: relative;
+}
 .fxs_calendarico .fxs_partnership {
 	transform: rotate(-90deg);
 	color: white;
-	margin: 1px 5px 0 0;
 	padding: 1px 5px 0;
-	float: left;
 	font-weight: 500;
 	font-style: italic;
-	vertical-align: top;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(50%);
 }
 .fxs_calendarico .fxs_partnership.fxs_platinum {
 	background-color: #49494f;
