@@ -6,16 +6,17 @@ var randomIcosRaw = function() {
 		icosRaw.push({
 			PartnershipLevel: Math.floor(Math.random() * 5) + 1,
 			Name: 'Votem',
-			Description: 'Voting for a mobile world',
+			Description:
+				'Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world ',
 			StartDate: {
-				Year: Math.floor(Math.random() * 2100)+1,
-				Month: Math.floor(Math.random() * 12)+1,
-				Day: Math.floor(Math.random() * 28)+1,
+				Year: Math.floor(Math.random() * 2100) + 1,
+				Month: Math.floor(Math.random() * 12) + 1,
+				Day: Math.floor(Math.random() * 28) + 1,
 			},
 			EndDate: {
-				Year: Math.floor(Math.random() * 2100)+1,
-				Month: Math.floor(Math.random() * 12)+1,
-				Day: Math.floor(Math.random() * 28)+1,
+				Year: Math.floor(Math.random() * 2100) + 1,
+				Month: Math.floor(Math.random() * 12) + 1,
+				Day: Math.floor(Math.random() * 28) + 1,
 			},
 			ImageUrl: 'https://tokenmarket.net/blockchain-static/ethereum/assets/votem/logo_small.png',
 			ICOWeb: 'https://www.votem.io/',
