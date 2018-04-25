@@ -4,7 +4,7 @@
   float:left;
 }
 .fxs_partnership{
-      transform: rotate(90deg);
+      transform: rotate(-90deg);
       color:white;
 
 }
