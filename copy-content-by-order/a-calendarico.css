@@ -12,6 +12,7 @@
 	float: left;
 	font-weight: 500;
 	font-style: italic;
+	vertical-align: top;
 }
 .fxs_calendarico .fxs_partnership.fxs_platinum {
 	background-color: #49494f;
