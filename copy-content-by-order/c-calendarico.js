@@ -144,12 +144,12 @@ var createPartnershipIcons = function(ico) {
 
 var initTimeVars = function(ico) {
 	ico.StartDate = new Date(ico.StartDate.Year, ico.StartDate.Month - 1, ico.StartDate.Day);
-	ico.MillisecondsToStart = !isStartedIco(ico) && ico.StartDate.getTime() - dinamicVars.Now.getTime();
+	ico.MillisecondsToStart = ico.StartDate.getTime() - dinamicVars.Now.getTime();
 	ico.EndDate = new Date(ico.EndDate.Year, ico.EndDate.Month - 1, ico.EndDate.Day);
 	ico.MillisecondsToClose =
 		!isEndedIco(ico) && isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
 	ico.MillisecondsDuration = ico.MillisecondsToClose - ico.MillisecondsToStart;
-	ico.MillisecondsElapsed = dinamicVars.Now.getTime() - ico.StartDate.getTime();
+	ico.MillisecondsElapsed = ico.MillisecondsToStart * -1;
 	return ico;
 };
 
