@@ -33,3 +33,11 @@
 tr:nth-child(even) {
 	background-color: #f3f3f8;
 }
+
+.fxs_ico_image{
+vertical-align: middle;
+}
+.fxs_ico_image img{
+	width: 100px;
+	height: 100px;
+}
