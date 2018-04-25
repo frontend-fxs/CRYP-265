@@ -61,8 +61,12 @@
 
 
 
-.fxs_calendarico .fa-diamond:before {
-	color: #e4871b;
+.fxs_calendarico .diamond {
+	width: 17px;
+	height: 14px;
+	display: inline-block;
+	background-image: url(https://editorial.blob.core.windows.net/images/Resources/icon-diamond.svg);
+	background-size: contain;
 }
 
 .fxs_calendarico .fxs_progressbar {
