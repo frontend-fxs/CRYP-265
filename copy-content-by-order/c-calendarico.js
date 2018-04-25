@@ -107,12 +107,18 @@ var filterIcosByDate = function() {
 	getRecentIcos();
 };
 
-var updateIcosRaw = function() {
-	icos = icosRaw.map(function(ico) {
+var createPartnershipIcons = function(ico){
 		ico.PartnershipIcons = [];
 		for (let index = 1; index < ico.PartnershipLevel; index++) {
 			ico.PartnershipIcons.push(index);
 		}
+		return ico;
+}
+
+var updateIcosRaw = function() {
+	icos = icosRaw.map(function(ico) {
+		
+		createPartnershipIcons(ico);
 
 		ico.StartDate = new Date(ico.StartDate.Year, ico.StartDate.Month - 1, ico.StartDate.Day);
 		ico.EndDate = new Date(ico.EndDate.Year, ico.EndDate.Month - 1, ico.EndDate.Day);
