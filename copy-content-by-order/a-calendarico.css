@@ -37,8 +37,8 @@
 .fxs_calendarico tr:nth-child(even) {
 	background-color: #f3f3f8;
 }
-.fxs_calendarico td {
-	padding: 20px;
+.fxs_calendarico .fxs_table>tbody>tr>td {
+	padding: 0 10px;
 }
 .fxs_calendarico td.fxs_partnership{
 	width: 120px;
