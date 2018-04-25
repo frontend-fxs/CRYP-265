@@ -28,7 +28,6 @@ var randomIcosRaw = function() {
 	return icosRaw;
 };
 
-
 var dinamicVars = {
 	Icos: {
 		Active: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] },
@@ -151,6 +150,9 @@ var initTimeVars = function(ico) {
 		!isEndedIco(ico) && isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
 	ico.MillisecondsDuration = ico.MillisecondsToClose - ico.MillisecondsToStart;
 	ico.MillisecondsElapsed = ico.MillisecondsToStart * -1;
+	if ((ico.EndDate.getTime() - dinamicVars.Now.getTime()) < (3*24*60*60*1000)) {
+		ico.Imminent = true;
+	}
 	return ico;
 };
 
