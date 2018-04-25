@@ -3,7 +3,7 @@
 	clear: both;
 	float: left;
 }
-.fxs_calendarico td:first-child {
+.fxs_calendarico .fxs_table>tbody>tr>td:first-child {
 	width: 0.1rem;
 	position: relative;
 	padding: 0;
