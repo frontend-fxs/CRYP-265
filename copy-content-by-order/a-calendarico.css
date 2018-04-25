@@ -15,8 +15,8 @@
 	font-style: italic;
 	position: absolute;
 	top:50%;
-	left:50%;
-	transform: translate(50%) rotate(-90deg);;
+	left:0;
+	transform: translateY(50%) translateX(0%) rotate(-90deg);;
 }
 .fxs_calendarico .fxs_partnership.fxs_platinum {
 	background-color: #49494f;
