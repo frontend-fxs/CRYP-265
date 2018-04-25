@@ -64,6 +64,7 @@
 	display: inline-block;
 	background-image: url(https://editorial.blob.core.windows.net/images/Resources/icon-diamond.svg);
 	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .fxs_calendarico .fxs_progressbar {
