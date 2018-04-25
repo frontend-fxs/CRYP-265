@@ -3,8 +3,8 @@
 	clear: both;
 	float: left;
 }
-.fxs_calendarico  td:first-child{
-	width:.1rem;
+.fxs_calendarico td:first-child {
+	width: 0.1rem;
 	position: relative;
 }
 .fxs_calendarico .fxs_partnership {
@@ -13,7 +13,7 @@
 	font-weight: 500;
 	font-style: italic;
 	transform: rotate(-90deg);
-	width:100%;
+	width: 100%;
 	text-align: center;
 }
 .fxs_calendarico .fxs_partnership.fxs_platinum {
@@ -41,6 +41,7 @@
 
 .fxs_calendarico .fxs_ico_image {
 	vertical-align: middle;
+	width: 100px;
 }
 .fxs_calendarico .fxs_ico_image img {
 	width: 100px;
@@ -54,7 +55,7 @@
 .fxs_calendarico .fxs_progressbar {
 	width: 100%;
 	float: left;
-	height: .9rem;
+	height: 0.9rem;
 	border: 1px solid #304c70;
 	display: block;
 	overflow: hidden;
