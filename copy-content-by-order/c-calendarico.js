@@ -10,12 +10,12 @@ var dinamicVars = {
 };
 
 var isEndedIco = function(ico) {
-	var isEnded = ico.endDate.getTime() < dinamicVars.Now.getTime();
+	var isEnded = ico.EndDate.getTime() < dinamicVars.Now.getTime();
 	return isEnded;
 };
 
 var isStartedIco = function(ico) {
-	var isStarted = ico.startDate.getTime() < dinamicVars.Now.getTime();
+	var isStarted = ico.StartDate.getTime() < dinamicVars.Now.getTime();
 	return isStarted;
 };
 
@@ -34,23 +34,23 @@ var sortByStartDate = function(icos) {
 
 var getActiveIcos = function() {
 	dinamicVars.Icos.Active.Platinum = icos.filter(function(ico) {
-		return !isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 5;
+		return !isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 5;
 	});
 	sortByEndDate(dinamicVars.Icos.Active.Platinum);
 	dinamicVars.Icos.Active.Gold = icos.filter(function(ico) {
-		return !isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 4;
+		return !isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 4;
 	});
 	sortByEndDate(dinamicVars.Icos.Active.Gold);
 	dinamicVars.Icos.Active.Silver = icos.filter(function(ico) {
-		return !isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 3;
+		return !isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 3;
 	});
 	sortByEndDate(dinamicVars.Icos.Active.Silver);
 	dinamicVars.Icos.Active.Bronze = icos.filter(function(ico) {
-		return !isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 2;
+		return !isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 2;
 	});
 	sortByEndDate(dinamicVars.Icos.Active.Bronze);
 	dinamicVars.Icos.Active.Basic = icos.filter(function(ico) {
-		return !isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 1;
+		return !isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 1;
 	});
 	sortByEndDate(dinamicVars.Icos.Active.Basic);
 };
@@ -58,37 +58,37 @@ var getActiveIcos = function() {
 
 var getUpcomingIcos = function() {
 	dinamicVars.Icos.Upcoming.Platinum = icos.filter(function(ico) {
-		return !isEndedIco(ico) && !isStartedIco(ico) && ico.partnershipLevel == 5;
+		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 5;
 	});
 	dinamicVars.Icos.Upcoming.Gold = icos.filter(function(ico) {
-		return !isEndedIco(ico) && !isStartedIco(ico) && ico.partnershipLevel == 4;
+		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 4;
 	});
 	dinamicVars.Icos.Upcoming.Silver = icos.filter(function(ico) {
-		return !isEndedIco(ico) && !isStartedIco(ico) && ico.partnershipLevel == 3;
+		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 3;
 	});
 	dinamicVars.Icos.Upcoming.Bronze = icos.filter(function(ico) {
-		return !isEndedIco(ico) && !isStartedIco(ico) && ico.partnershipLevel == 2;
+		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 2;
 	});
 	dinamicVars.Icos.Upcoming.Basic = icos.filter(function(ico) {
-		return !isEndedIco(ico) && !isStartedIco(ico) && ico.partnershipLevel == 1;
+		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 1;
 	});
 };
 
 var getRecentIcos = function() {
 	dinamicVars.Icos.Recent.Platinum = icos.filter(function(ico) {
-		return isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 5;
+		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 5;
 	});
 	dinamicVars.Icos.Recent.Gold = icos.filter(function(ico) {
-		return isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 4;
+		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 4;
 	});
 	dinamicVars.Icos.Recent.Silver = icos.filter(function(ico) {
-		return isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 3;
+		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 3;
 	});
 	dinamicVars.Icos.Recent.Bronze = icos.filter(function(ico) {
-		return isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 2;
+		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 2;
 	});
 	dinamicVars.Icos.Recent.Basic = icos.filter(function(ico) {
-		return isEndedIco(ico) && isStartedIco(ico) && ico.partnershipLevel == 1;
+		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 1;
 	});
 };
 
@@ -115,7 +115,7 @@ var updateIcosRaw = function() {
 		ico.MillisecondsToStart -= ico.StartCountDownMinutes * 1000 * 60;
 		ico.StartCountDown = ico.StartCountDownDays + ':' + ico.ReleaseCountDownHours + ':' + ico.ReleaseCountDownMinutes;
 
-		ico.MillisecondsToClose = !isEndedIco(ico) && isStartedIco(ico) && ico.endDate.getTime() - dinamicVars.Now.getTime();
+		ico.MillisecondsToClose = !isEndedIco(ico) && isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
 
 		ico.CloseCountDownDays = parseInt(ico.MillisecondsToClose / 1000 * 60 * 60 * 24);
 		ico.MillisecondsToClose -= ico.CloseCountDownDays * 1000 * 60 * 60 * 24;
@@ -128,10 +128,7 @@ var updateIcosRaw = function() {
 		ico.MillisecondsDuration = ico.MillisecondsToClose - ico.MillisecondsToStart; 
 		ico.MillisecondsElapsed = dinamicVars.Now.getTime() - ico.MillisecondsToStart;
 
-		ico.progressToEnd = ico.MillisecondsElapsed * 100 / ico.MillisecondsDuration;
-
-		ico.progressToStart = ico.MillisecondsElapsed * 100 / ico.MillisecondsDuration;
-
+		ico.Progress = ico.MillisecondsElapsed * 100 / ico.MillisecondsDuration;
 
 		ico.StartDateLocale = ico.StartDate.toLocaleDateString('en-EN', {
 			day: 'numeric',
