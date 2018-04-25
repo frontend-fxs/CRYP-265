@@ -154,7 +154,7 @@ var initTimeVars = function(ico) {
 };
 
 var calculateProgress = function(ico) {
-	ico.Progress = (ico.MillisecondsElapsed * 100) / ico.MillisecondsDuration;
+	ico.Progress = parseInt((ico.MillisecondsElapsed * 100) / ico.MillisecondsDuration);
 	return ico;
 };
 
