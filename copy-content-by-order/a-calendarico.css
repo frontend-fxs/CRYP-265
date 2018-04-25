@@ -9,7 +9,6 @@
 	position: relative;
 }
 .fxs_calendarico .fxs_partnership {
-	transform: rotate(-90deg);
 	color: white;
 	padding: 1px 5px 0;
 	font-weight: 500;
@@ -17,7 +16,7 @@
 	position: absolute;
 	top:50%;
 	left:50%;
-	transform: translate(50%);
+	transform: translate(50%) rotate(-90deg);;
 }
 .fxs_calendarico .fxs_partnership.fxs_platinum {
 	background-color: #49494f;
