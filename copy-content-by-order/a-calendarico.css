@@ -4,8 +4,7 @@
 	float: left;
 }
 .fxs_calendarico  td:first-child{
-	width:2rem;
-	height: 130px;
+	width:.1rem;
 	position: relative;
 }
 .fxs_calendarico .fxs_partnership {
@@ -15,6 +14,7 @@
 	font-style: italic;
 	transform: rotate(-90deg);
 	width:100%;
+	text-align: center;
 }
 .fxs_calendarico .fxs_partnership.fxs_platinum {
 	background-color: #49494f;
