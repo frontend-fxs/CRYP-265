@@ -59,36 +59,46 @@ var getUpcomingIcos = function() {
 	dinamicVars.Icos.Upcoming.Platinum = icos.filter(function(ico) {
 		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 5;
 	});
+	sortByStartDate(dinamicVars.Icos.Upcoming.Platinum);
 	dinamicVars.Icos.Upcoming.Gold = icos.filter(function(ico) {
 		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 4;
 	});
+	sortByStartDate(dinamicVars.Icos.Upcoming.Gold);
 	dinamicVars.Icos.Upcoming.Silver = icos.filter(function(ico) {
 		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 3;
 	});
+	sortByStartDate(dinamicVars.Icos.Upcoming.Silver);
 	dinamicVars.Icos.Upcoming.Bronze = icos.filter(function(ico) {
 		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 2;
 	});
+	sortByStartDate(dinamicVars.Icos.Upcoming.Bronze);
 	dinamicVars.Icos.Upcoming.Basic = icos.filter(function(ico) {
 		return !isEndedIco(ico) && !isStartedIco(ico) && ico.PartnershipLevel == 1;
 	});
+	sortByStartDate(dinamicVars.Icos.Upcoming.Basic);
 };
 
 var getRecentIcos = function() {
 	dinamicVars.Icos.Recent.Platinum = icos.filter(function(ico) {
 		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 5;
 	});
+	sortByEndDate(dinamicVars.Icos.Recent.Platinum);
 	dinamicVars.Icos.Recent.Gold = icos.filter(function(ico) {
 		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 4;
 	});
+	sortByEndDate(dinamicVars.Icos.Recent.Gold);
 	dinamicVars.Icos.Recent.Silver = icos.filter(function(ico) {
 		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 3;
 	});
+	sortByEndDate(dinamicVars.Icos.Recent.Silver);
 	dinamicVars.Icos.Recent.Bronze = icos.filter(function(ico) {
 		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 2;
 	});
+	sortByEndDate(dinamicVars.Icos.Recent.Bronze);
 	dinamicVars.Icos.Recent.Basic = icos.filter(function(ico) {
 		return isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 1;
 	});
+	sortByEndDate(dinamicVars.Icos.Recent.Basic);
 };
 
 var filterIcosByDate = function() {
