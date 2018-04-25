@@ -14,7 +14,7 @@
 	font-style: italic;
 }
 .fxs_calendarico .fxs_partnership.fxs_platinum {
-	background-color: #2F2F33;
+	background-color: #2f2f33;
 }
 
 .fxs_calendarico .fxs_partnership.fxs_gold {
@@ -33,13 +33,14 @@
 	background-color: #f3f3f8;
 }
 .fxs_calendarico td {
-	padding:20px;
+	padding: 20px;
 }
 
-.fxs_calendarico .fxs_ico_image{
-vertical-align: middle;
+.fxs_calendarico .fxs_ico_image {
+	vertical-align: middle;
 }
-.fxs_calendarico .fxs_ico_image img{
+.fxs_calendarico .fxs_ico_image img {
 	width: 100px;
 	height: 100px;
+	margin: 10px;
 }
