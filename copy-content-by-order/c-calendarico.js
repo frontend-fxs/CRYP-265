@@ -105,7 +105,7 @@ var updateIcosRaw = function() {
 			ico.PartnershipIcons.push(index);
 		}
 
-		ico.MillisecondsToStart = !isStartedIco(ico) && ico.endDate.getTime() - dinamicVars.Now.getTime();
+		ico.MillisecondsToStart = !isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
 
 		ico.StartCountDownDays = parseInt(ico.MillisecondsToStart / 1000 * 60 * 60 * 24);
 		ico.MillisecondsToStart -= ico.StartCountDownDays * 1000 * 60 * 60 * 24;
