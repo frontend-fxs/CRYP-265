@@ -1,5 +1,6 @@
 var htmlTemplateFile = 'copy-content-by-order/d-mustache.html';
 var icos = [];
+
 var dinamicVars = {
 	Icos: {
 		Active: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] },
