@@ -3,6 +3,7 @@
 	clear: both;
 	float: left;
 }
+
 .fxs_partnership {
 	transform: rotate(-90deg);
 	color: white;
@@ -12,15 +13,23 @@
 	font-weight: 500;
 	font-style: italic;
 }
+
 .fxs_partnership.fxs_platinum {
 	background-color: #1b1c23;
 }
+
 .fxs_partnership.fxs_gold {
 	background-color: #e4871b;
 }
+
 .fxs_partnership.fxs_silver {
 	background-color: #a3a3a8;
 }
+
 .fxs_partnership.fxs_bronze {
 	background-color: #f5c861;
+}
+
+tr:nth-child(even) {
+	background-color: #f3f3f8;
 }
