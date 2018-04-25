@@ -14,7 +14,7 @@
 	font-style: italic;
 }
 .fxs_calendarico .fxs_partnership.fxs_platinum {
-	background-color: #2f2f33;
+	background-color: #49494f;
 }
 
 .fxs_calendarico .fxs_partnership.fxs_gold {
@@ -43,4 +43,22 @@
 	width: 100px;
 	height: 100px;
 	margin: 10px;
+}
+.fxs_calendarico .fa-diamond:before {
+	color: #e4871b;
+}
+
+.fxs_calendarico .fxs_progressbar {
+	width: 100%;
+	float: left;
+	height: 1rem;
+	border: 1px solid #304c70;
+	display: block;
+}
+
+.fxs_calendarico .fxs_progressbar span {
+	background-color: #304c70;
+	float: left;
+	height: 1rem;
+	display: block;
 }
