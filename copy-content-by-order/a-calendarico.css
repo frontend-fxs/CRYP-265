@@ -6,6 +6,7 @@
 .fxs_calendarico td:first-child {
 	width: 0.1rem;
 	position: relative;
+	padding: 0;
 }
 .fxs_calendarico p.fxs_partnership {
 	color: white;
@@ -15,6 +16,7 @@
 	transform: rotate(-90deg);
 	width: 100%;
 	text-align: center;
+	margin:0;
 }
 .fxs_calendarico p.fxs_partnership.fxs_platinum {
 	background-color: #49494f;
@@ -39,7 +41,7 @@
 	padding: 20px;
 }
 .fxs_calendarico td.fxs_partnership{
-	width: 100px;
+	width: 120px;
 	text-align: center;
 
 }
