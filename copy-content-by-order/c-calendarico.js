@@ -32,7 +32,6 @@ var sortByStartDate = function(icos) {
 	});
 };
 
-
 var getActiveIcos = function() {
 	dinamicVars.Icos.Active.Platinum = icos.filter(function(ico) {
 		return !isEndedIco(ico) && isStartedIco(ico) && ico.PartnershipLevel == 5;
@@ -55,7 +54,6 @@ var getActiveIcos = function() {
 	});
 	sortByEndDate(dinamicVars.Icos.Active.Basic);
 };
-
 
 var getUpcomingIcos = function() {
 	dinamicVars.Icos.Upcoming.Platinum = icos.filter(function(ico) {
@@ -106,30 +104,31 @@ var updateIcosRaw = function() {
 			ico.PartnershipIcons.push(index);
 		}
 
-		ico.MillisecondsToStart = !isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
+		ico.MillisecondsToStart = !isStartedIco(ico) && ico.StartDate.getTime() - dinamicVars.Now.getTime();
+		ico.MillisecondsToClose =
+			!isEndedIco(ico) && isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
 
-		ico.StartCountDownDays = parseInt(ico.MillisecondsToStart / 1000 * 60 * 60 * 24);
-		ico.MillisecondsToStart -= ico.StartCountDownDays * 1000 * 60 * 60 * 24;
-		ico.StartCountDownHours = parseInt(ico.MillisecondsToStart / 1000 * 60 * 60);
-		ico.MillisecondsToStart -= ico.StartCountDownHours * 1000 * 60 * 60;
-		ico.StartCountDownMinutes = parseInt(ico.MillisecondsToStart / 1000 * 60);
-		ico.MillisecondsToStart -= ico.StartCountDownMinutes * 1000 * 60;
-		ico.StartCountDown = ico.StartCountDownDays + ':' + ico.ReleaseCountDownHours + ':' + ico.ReleaseCountDownMinutes;
-
-		ico.MillisecondsToClose = !isEndedIco(ico) && isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
-
-		ico.CloseCountDownDays = parseInt(ico.MillisecondsToClose / 1000 * 60 * 60 * 24);
-		ico.MillisecondsToClose -= ico.CloseCountDownDays * 1000 * 60 * 60 * 24;
-		ico.CloseCountDownHours = parseInt(ico.MillisecondsToClose / 1000 * 60 * 60);
-		ico.MillisecondsToClose -= ico.CloseCountDownHours * 1000 * 60 * 60;
-		ico.CloseCountDownMinutes = parseInt(ico.MillisecondsToClose / 1000 * 60);
-		ico.MillisecondsToClose -= ico.CloseCountDownMinutes * 1000 * 60;
-		ico.CloseCountDown = ico.CloseCountDownDays + ':' + ico.CloseCountDownHours + ':' + ico.CloseCountDownMinutes;
-
-		ico.MillisecondsDuration = ico.MillisecondsToClose - ico.MillisecondsToStart; 
+		ico.MillisecondsDuration = ico.MillisecondsToClose - ico.MillisecondsToStart;
 		ico.MillisecondsElapsed = dinamicVars.Now.getTime() - ico.MillisecondsToStart;
 
 		ico.Progress = ico.MillisecondsElapsed * 100 / ico.MillisecondsDuration;
+
+		ico.StartCountDownDays = parseInt(ico.MillisecondsToStart / (1000 * 60 * 60 * 24));
+		ico.MillisecondsToStart -= ico.StartCountDownDays * 1000 * 60 * 60 * 24;
+		ico.StartCountDownHours = parseInt(ico.MillisecondsToStart / (1000 * 60 * 60));
+		ico.MillisecondsToStart -= ico.StartCountDownHours * 1000 * 60 * 60;
+		ico.StartCountDownMinutes = parseInt(ico.MillisecondsToStart / 1000 * 60);
+		ico.MillisecondsToStart -= ico.StartCountDownMinutes * 1000 * 60;
+		ico.StartCountDown =
+			ico.StartCountDownDays + ':' + ico.ReleaseCountDownHours + ':' + ico.ReleaseCountDownMinutes;
+
+		ico.CloseCountDownDays = parseInt(ico.MillisecondsToClose / (1000 * 60 * 60 * 24));
+		ico.MillisecondsToClose -= ico.CloseCountDownDays * 1000 * 60 * 60 * 24;
+		ico.CloseCountDownHours = parseInt(ico.MillisecondsToClose / (1000 * 60 * 60));
+		ico.MillisecondsToClose -= ico.CloseCountDownHours * 1000 * 60 * 60;
+		ico.CloseCountDownMinutes = parseInt(ico.MillisecondsToClose / (1000 * 60));
+		ico.MillisecondsToClose -= ico.CloseCountDownMinutes * 1000 * 60;
+		ico.CloseCountDown = ico.CloseCountDownDays + ':' + ico.CloseCountDownHours + ':' + ico.CloseCountDownMinutes;
 
 		ico.StartDateLocale = ico.StartDate.toLocaleDateString('en-EN', {
 			day: 'numeric',
