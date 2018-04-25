@@ -149,7 +149,7 @@ var initTimeVars = function(ico) {
 	ico.MillisecondsToClose =
 		!isEndedIco(ico) && isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
 	ico.MillisecondsDuration = ico.MillisecondsToClose - ico.MillisecondsToStart;
-	ico.MillisecondsElapsed = dinamicVars.Now.getTime() - ico.MillisecondsToStart;
+	ico.MillisecondsElapsed = dinamicVars.Now.getTime() - ico.StartDate.getTime();
 	return ico;
 };
 
