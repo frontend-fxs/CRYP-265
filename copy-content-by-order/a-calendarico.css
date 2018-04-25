@@ -59,8 +59,8 @@
 }
 
 .fxs_calendarico .diamond {
-	width: 17px;
-	height: 14px;
+	width: 20px;
+	height: 20px;
 	display: inline-block;
 	background-image: url(https://editorial.blob.core.windows.net/images/Resources/icon-diamond.svg);
 	background-size: contain;
