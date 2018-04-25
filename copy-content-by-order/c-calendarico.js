@@ -114,20 +114,19 @@ var updateIcosRaw = function() {
 		ico.Progress = ico.MillisecondsElapsed * 100 / ico.MillisecondsDuration;
 
 		ico.StartCountDownDays = parseInt(ico.MillisecondsToStart / (1000 * 60 * 60 * 24));
-		ico.MillisecondsToStart -= ico.StartCountDownDays * 1000 * 60 * 60 * 24;
+		ico.MillisecondsToStart -= (ico.StartCountDownDays * 1000 * 60 * 60 * 24);
 		ico.StartCountDownHours = parseInt(ico.MillisecondsToStart / (1000 * 60 * 60));
-		ico.MillisecondsToStart -= ico.StartCountDownHours * 1000 * 60 * 60;
-		ico.StartCountDownMinutes = parseInt(ico.MillisecondsToStart / 1000 * 60);
-		ico.MillisecondsToStart -= ico.StartCountDownMinutes * 1000 * 60;
-		ico.StartCountDown =
-			ico.StartCountDownDays + ':' + ico.ReleaseCountDownHours + ':' + ico.ReleaseCountDownMinutes;
+		ico.MillisecondsToStart -= (ico.StartCountDownHours * 1000 * 60 * 60);
+		ico.StartCountDownMinutes = parseInt(ico.MillisecondsToStart / (1000 * 60));
+		ico.MillisecondsToStart -= (ico.StartCountDownMinutes * 1000 * 60);
+		ico.StartCountDown = ico.StartCountDownDays + ':' + ico.StartCountDownHours + ':' + ico.StartCountDownMinutes;
 
 		ico.CloseCountDownDays = parseInt(ico.MillisecondsToClose / (1000 * 60 * 60 * 24));
-		ico.MillisecondsToClose -= ico.CloseCountDownDays * 1000 * 60 * 60 * 24;
+		ico.MillisecondsToClose -= (ico.CloseCountDownDays * 1000 * 60 * 60 * 24);
 		ico.CloseCountDownHours = parseInt(ico.MillisecondsToClose / (1000 * 60 * 60));
-		ico.MillisecondsToClose -= ico.CloseCountDownHours * 1000 * 60 * 60;
+		ico.MillisecondsToClose -= (ico.CloseCountDownHours * 1000 * 60 * 60);
 		ico.CloseCountDownMinutes = parseInt(ico.MillisecondsToClose / (1000 * 60));
-		ico.MillisecondsToClose -= ico.CloseCountDownMinutes * 1000 * 60;
+		ico.MillisecondsToClose -= (ico.CloseCountDownMinutes * 1000 * 60);
 		ico.CloseCountDown = ico.CloseCountDownDays + ':' + ico.CloseCountDownHours + ':' + ico.CloseCountDownMinutes;
 
 		ico.StartDateLocale = ico.StartDate.toLocaleDateString('en-EN', {
