@@ -23,19 +23,20 @@
 	padding: 1px 5px;
 	font-weight: 500;
 	font-style: italic;
+	font-size: .8rem;
 	transform: rotate(-90deg);
 	width: 100%;
 	text-align: center;
 	margin:0;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_partnership{
-	width: 120px;
+	width: 105px;
 	text-align: left;
 
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image {
 	vertical-align: middle;
-	width: 95px;
+	width: 85px;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image img {
 	width: 75px;
