@@ -5,7 +5,7 @@
 	overflow: scroll;
 }
 .fxs_calendarico .fxs_table{
-	min-width: 1024px;
+	min-width: 985px;
 }
 .fxs_calendarico .fxs_table>tbody>tr:nth-child(even) {
 	background-color: #f3f3f8;
