@@ -27,16 +27,14 @@
 .fxs_calendarico .fxs_btn {
 	margin-bottom: 0.5rem;
 	font-size: 0.8rem;
+	max-width: 120px;
 }
 @media (min-width: 680px) {
 	.fxs_calendarico .fxs_btn {
 		margin-bottom: 0.92rem;
 	}
 }
-.fxs_calendarico .fxs_table > thead > tr > th.fxs_links,
-.fxs_calendarico .fxs_table > tbody > tr > td.fxs_links{
-	max-width:150px;
-}
+
 .fxs_calendarico .fxs_table {
 	width: 100%;
 }
