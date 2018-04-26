@@ -10,7 +10,7 @@ var randomIcosRaw = function() {
 				var times = Math.floor(Math.random() * 5) +1;
 				var description = '';
 				for (var index = 0; index < times; index++) {
-					description += 'Voting for a mobile world';
+					description += 'Voting for a mobile world ';
 				}
 				return description;
 			},				
