@@ -29,6 +29,7 @@
 	font-size: 0.8rem;
 	max-width: 150px;
 	float: right;
+	margin-left: 10px;
 }
 @media (min-width: 680px) {
 	.fxs_calendarico .fxs_btn {
@@ -46,7 +47,7 @@
 .fxs_calendarico .fxs_table > tbody > tr > td {
 	padding: 5px;
 }
-.fxs_calendarico .fxs_links{
+.fxs_calendarico .fxs_links {
 	text-align: center;
 }
 .fxs_calendarico p.fxs_partnership {
@@ -58,7 +59,7 @@
 	transform: rotate(-90deg) translate(-31px, -60px);
 	text-align: center;
 	margin: 0;
-	max-width:75px;
+	max-width: 75px;
 }
 @media (min-width: 680px) {
 	.fxs_calendarico p.fxs_partnership {
