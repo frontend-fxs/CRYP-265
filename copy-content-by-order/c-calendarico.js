@@ -7,7 +7,7 @@ var randomIcosRaw = function() {
 			PartnershipLevel: Math.floor(Math.random() * 5) + 1,
 			Name: 'Votem',
 			Description:
-				'Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world Voting for a mobile world',
+				'Voting for a mobile world',
 			StartDate: {
 				Year: Math.floor(Math.random() * 3) + 2017,
 				Month: Math.floor(Math.random() * 12) + 1,
