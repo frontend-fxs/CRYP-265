@@ -1,11 +1,11 @@
-.fxs_table > thead > tr > th.fxs_hidden_st_table,
-.fxs_table > tbody > tr > td.fxs_hidden_st_table {
+.fxs_calendarico .fxs_table > thead > tr > th.fxs_hidden_st_table,
+.fxs_calendarico .fxs_table > tbody > tr > td.fxs_hidden_st_table {
 	display: none;
 }
 
 @media (min-width: 768px) {
-	.fxs_table > thead > tr > th.fxs_hidden_st_table,
-	.fxs_table > tbody > tr > td.fxs_hidden_st_table {
+	.fxs_calendarico .fxs_table > thead > tr > th.fxs_hidden_st_table,
+	.fxs_calendarico .fxs_table > tbody > tr > td.fxs_hidden_st_table {
 		display: table-cell;
 	}
 }
