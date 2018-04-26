@@ -37,7 +37,7 @@
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image img {
 	width: 75px;
 	height: 75px;
-	margin: 10px 0;
+	margin: 0;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_countdown{
 	display:table-cell;
