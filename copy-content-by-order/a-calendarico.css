@@ -24,6 +24,15 @@
 		margin-bottom: 0.92rem;
 	}
 }
+.fxs_calendarico .fxs_btn{
+	margin-bottom: 0.5rem;
+	font-size: .8rem;
+}
+@media (min-width: 680px) {
+	.fxs_calendarico .fxs_btn {
+		margin-bottom: 0.92rem;
+	}
+}
 
 .fxs_calendarico .fxs_table {
 	width: 100%;
