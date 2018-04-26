@@ -2,7 +2,7 @@ var htmlTemplateFile = 'copy-content-by-order/d-mustache.html';
 var icos = [];
 
 var randomIcosRaw = function() {
-	for (var i = 0; i < 1000; i++) {
+	for (var i = 0; i < 100; i++) {
 		icosRaw.push({
 			PartnershipLevel: Math.floor(Math.random() * 5) + 1,
 			Name: 'Votem',
