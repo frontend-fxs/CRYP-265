@@ -10,11 +10,7 @@
 .fxs_calendarico .fxs_table>tbody>tr:nth-child(even) {
 	background-color: #f3f3f8;
 }
-.fxs_calendarico .fxs_table>tbody>tr>td:first-child {
-	width: 40px;
-	position: relative;
-	padding: 0;
-}
+
 .fxs_calendarico .fxs_table>tbody>tr>td {
 	padding: 10px 5px;
 }
@@ -25,13 +21,9 @@
 	font-weight: 500;
 	font-style: italic;
 	font-size: .8rem;
-	transform: rotate(-90deg) translate(15px, -5px);
+	transform: rotate(-90deg);
 	text-align: center;
 	margin:0;
-	position: absolute;
-	top:50%;
-	left:0;
-
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_partnership{
 	width: 105px;
