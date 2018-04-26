@@ -67,10 +67,17 @@
 		margin: 0;
 	}
 }
+.fxs_calendarico .fxs_table > thead > tr > th.fxs_partnership ,
+.fxs_calendarico .fxs_table > tbody > tr > td.fxs_partnership {
+	display: none;
+}
+@media (min-width:375px){
 .fxs_calendarico .fxs_table > tbody > tr > td.fxs_partnership {
 	width: 105px;
 	text-align: left;
 }
+}
+
 .fxs_calendarico .fxs_table > tbody > tr > td.fxs_ico_image {
 	vertical-align: middle;
 	width: 85px;
