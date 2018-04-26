@@ -57,6 +57,7 @@
 	transform: rotate(-90deg) translate(-31px, -60px);
 	text-align: center;
 	margin: 0;
+	max-width:75px;
 }
 @media (min-width: 680px) {
 	.fxs_calendarico p.fxs_partnership {
