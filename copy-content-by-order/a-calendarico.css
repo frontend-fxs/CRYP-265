@@ -27,7 +27,7 @@
 .fxs_calendarico .fxs_btn {
 	margin-bottom: 0.5rem;
 	font-size: 0.8rem;
-	max-width: 120px;
+	max-width: 150px;
 }
 @media (min-width: 680px) {
 	.fxs_calendarico .fxs_btn {
@@ -45,7 +45,9 @@
 .fxs_calendarico .fxs_table > tbody > tr > td {
 	padding: 5px;
 }
-
+.fxs_calendarico .fxs_links{
+	text-align: center;
+}
 .fxs_calendarico p.fxs_partnership {
 	color: white;
 	padding: 1px 5px;
