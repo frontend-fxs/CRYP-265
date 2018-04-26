@@ -15,18 +15,18 @@
 	clear: both;
 	float: left;
 }
-.fxs_calendarico p{
+.fxs_calendarico p {
 	margin-bottom: 0.5rem;
-	font-size: .8rem;
+	font-size: 0.8rem;
 }
 @media (min-width: 680px) {
 	.fxs_calendarico p {
 		margin-bottom: 0.92rem;
 	}
 }
-.fxs_calendarico .fxs_btn{
+.fxs_calendarico .fxs_btn {
 	margin-bottom: 0.5rem;
-	font-size: .8rem;
+	font-size: 0.8rem;
 }
 @media (min-width: 680px) {
 	.fxs_calendarico .fxs_btn {
@@ -67,15 +67,19 @@
 		margin: 0;
 	}
 }
-.fxs_calendarico .fxs_table > thead > tr > th.fxs_partnership ,
+.fxs_calendarico .fxs_table > thead > tr > th.fxs_partnership,
 .fxs_calendarico .fxs_table > tbody > tr > td.fxs_partnership {
 	display: none;
 }
-@media (min-width:375px){
-.fxs_calendarico .fxs_table > tbody > tr > td.fxs_partnership {
-	width: 105px;
-	text-align: left;
-}
+@media (min-width: 375px) {
+	.fxs_calendarico .fxs_table > thead > tr > th.fxs_partnership,
+	.fxs_calendarico .fxs_table > tbody > tr > td.fxs_partnership {
+		display: table-cell;
+	}
+	.fxs_calendarico .fxs_table > tbody > tr > td.fxs_partnership {
+		width: 105px;
+		text-align: left;
+	}
 }
 
 .fxs_calendarico .fxs_table > tbody > tr > td.fxs_ico_image {
