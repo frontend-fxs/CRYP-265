@@ -1,5 +1,5 @@
 .fxs_table > thead > tr > th.fxs_hidden_st_table,
-.fxs_table > body > tr > td.fxs_hidden_st_table {
+.fxs_table > tbody > tr > td.fxs_hidden_st_table {
 	display: none;
 }
 
