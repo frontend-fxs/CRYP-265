@@ -21,7 +21,7 @@
 	font-weight: 500;
 	font-style: italic;
 	font-size: .8rem;
-	transform: rotate(-90deg);
+	transform: rotate(-90deg) translate(-100%, -100%);
 	text-align: center;
 	margin:0;
 }
@@ -33,6 +33,7 @@
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image {
 	vertical-align: middle;
 	width: 85px;
+	padding-left:30px;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image img {
 	width: 75px;
