@@ -6,8 +6,14 @@ var randomIcosRaw = function() {
 		icosRaw.push({
 			PartnershipLevel: Math.floor(Math.random() * 5) + 1,
 			Name: 'Votem',
-			Description:
-				'Voting for a mobile world',
+			Description: function(){
+				var times = Math.floor(Math.random() * 5);
+				var description = '';
+				for (var index = 0; index < times; index++) {
+					description += 'Voting for a mobile world';
+				}
+				return description;
+			},				
 			StartDate: {
 				Year: Math.floor(Math.random() * 3) + 2017,
 				Month: Math.floor(Math.random() * 12) + 1,
