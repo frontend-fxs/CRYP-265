@@ -1,9 +1,11 @@
-.fxs_hidden_st_table {
+.fxs_table > thead > tr > th.fxs_hidden_st_table,
+.fxs_table > thead > tr > td.fxs_hidden_st_table {
 	display: none;
 }
 
 @media (min-width: 768px) {
-	.fxs_hidden_st_table {
+	.fxs_table > thead > tr > th.fxs_hidden_st_table,
+	.fxs_table > thead > tr > td.fxs_hidden_st_table {
 		display: table-cell;
 	}
 }
