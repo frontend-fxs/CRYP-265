@@ -1,795 +1,794 @@
-<script id="icoCalendarTemplate" type="x-tmpl-mustache">
-
-<ul class="fxs_tabs_nav fxs_tabs_nav_big">
-    <li class="active">
-        <a id="" data-toggle="tab" href="#active" title="{{Translations.Active}}" aria-expanded="true">
-            {{Translations.Active}}
-        </a>
-    </li>
-    <li class="">
-        <a id="" data-toggle="tab" href="#upcoming" title="{{Translations.Upcoming}}" aria-expanded="true">
-            {{Translations.Upcoming}}
-        </a>
-    </li>
-    <li class="">
-        <a id="" data-toggle="tab" href="#recent" title="{{Translations.Recent}}" aria-expanded="true">
-            {{Translations.Recent}}
-        </a>
-    </li>
-</ul>
-<div class="tab-content">
-    <div id="active" role="tabpanel" class="tab-pane fade active in">
-        <table class="fxs_table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>
-                        {{Translations.Ico}}
-                    </th>
-                    <th></th>
-                    <th>
-                        {{Translations.TimeLeft}}
-                    </th>
-                    <th>
-                        {{Translations.Window}}
-                    </th>
-                    <th>
-                        {{Translations.Description}}
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#Icos.Active.Platinum}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_platinum">
-                            {{Translations.Platinum}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{CloseCountDown}}</strong>
-                        </p>
-                        <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
-                            <span style="width:{{Progress}}%"></span>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
+<!-- <script id="icoCalendarTemplate" type="x-tmpl-mustache"> -->
+<div class="fxs_calendarico">
+    <ul class="fxs_tabs_nav fxs_tabs_nav_big">
+        <li class="active">
+            <a id="" data-toggle="tab" href="#active" title="{{Translations.Active}}" aria-expanded="true">
+                {{Translations.Active}}
+            </a>
+        </li>
+        <li class="">
+            <a id="" data-toggle="tab" href="#upcoming" title="{{Translations.Upcoming}}" aria-expanded="true">
+                {{Translations.Upcoming}}
+            </a>
+        </li>
+        <li class="">
+            <a id="" data-toggle="tab" href="#recent" title="{{Translations.Recent}}" aria-expanded="true">
+                {{Translations.Recent}}
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="active" role="tabpanel" class="tab-pane fade active in">
+            <table class="fxs_table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            {{Translations.Ico}}
+                        </th>
+                        <th></th>
+                        <th>
+                            {{Translations.TimeLeft}}
+                        </th>
+                        <th>
+                            {{Translations.Window}}
+                        </th>
+                        <th>
+                            {{Translations.Description}}
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#Icos.Active.Platinum}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_platinum">
+                                {{Translations.Platinum}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{CloseCountDown}}</strong>
+                            </p>
+                            <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
+                                <span style="width:{{Progress}}%"></span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Active.Platinum}} {{#Icos.Active.Gold}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_gold">
+                                {{Translations.Gold}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{CloseCountDown}}</strong>
+                            </p>
+                            <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
+                                <span style="width:{{Progress}}%"></span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Active.Gold}} {{#Icos.Active.Silver}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_silver">
+                                {{Translations.Silver}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{CloseCountDown}}</strong>
+                            </p>
+                            <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
+                                <span style="width:{{Progress}}%"></span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Active.Silver}} {{#Icos.Active.Bronze}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_bronze">
+                                {{Translations.Bronze}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{CloseCountDown}}</strong>
+                            </p>
+                            <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
+                                <span style="width:{{Progress}}%"></span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Active.Bronze}} {{#Icos.Active.Basic}}
+                    <tr>
+                        <td></td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{CloseCountDown}}</strong>
+                            </p>
+                            <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
+                                <span style="width:{{Progress}}%"></span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Active.Basic}}
+                </tbody>
+            </table>
+        </div>
+        <div id="upcoming" role="tabpanel" class="tab-pane fade">
+            <table class="fxs_table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            {{Translations.Ico}}
+                        </th>
+                        <th>
+                        </th>
+                        <th>
+                            {{Translations.ReleaseIn}}
+                        </th>
+                        <th>
+                            {{Translations.Window}}
+                        </th>
+                        <th>
+                            {{Translations.Description}}
+                        </th>
+                        <th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#Icos.Upcoming.Platinum}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_platinum">
+                                {{Translations.Platinum}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{StartCountDown}}</strong>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Upcoming.Platinum}} {{#Icos.Upcoming.Gold}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_gold">
+                                {{Translations.Gold}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{StartCountDown}}</strong>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Upcoming.Gold}} {{#Icos.Upcoming.Silver}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_silver">
+                                {{Translations.Silver}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{StartCountDown}}</strong>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Upcoming.Silver}} {{#Icos.Upcoming.Bronze}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_bronze">
+                                {{Translations.Bronze}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{StartCountDown}}</strong>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Upcoming.Bronze}} {{#Icos.Upcoming.Basic}}
+                    <tr>
+                        <td></td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td class="fxs_countdown">
+                            <p>
+                                <strong>{{StartCountDown}}</strong>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{StartDateLocale}}
+                            </p>
+                            <p>
+                                {{EndDateLocale}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
+                                    {{Translations.Website}}
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
+                                    {{Translations.Report}}
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    {{/Icos.Upcoming.Basic}}
+                </tbody>
+            </table>
+        </div>
+        <div id="recent" role="tabpanel" class="tab-pane fade">
+            <table class="fxs_table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            {{Translations.Ico}}
+                        </th>
+                        <th>
+                        </th>
+                        <th>
+                            {{Translations.Description}}
+                        </th>
+                        <th>
+                        </th>
+                        <th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#Icos.Recent.Platinum}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_platinum">
+                                {{Translations.Platinum}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
                             <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
                                 {{Translations.Website}}
                             </a>
-                        </p>
-                        <p>
+                        </td>
+                        <td>
                             <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
                                 {{Translations.Report}}
                             </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Active.Platinum}} 
-                {{#Icos.Active.Gold}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_gold">
-                            {{Translations.Gold}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{CloseCountDown}}</strong>
-                        </p>
-                        <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
-                            <span style="width:{{Progress}}%"></span>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
+                        </td>
+                    </tr>
+                    {{/Icos.Recent.Platinum}} {{#Icos.Recent.Gold}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_gold">
+                                {{Translations.Gold}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
                             <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
                                 {{Translations.Website}}
                             </a>
-                        </p>
-                        <p>
+                        </td>
+                        <td>
                             <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
                                 {{Translations.Report}}
                             </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Active.Gold}} {{#Icos.Active.Silver}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_silver">
-                            {{Translations.Silver}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{CloseCountDown}}</strong>
-                        </p>
-                        <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
-                            <span style="width:{{Progress}}%"></span>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
+                        </td>
+                    </tr>
+                    {{/Icos.Recent.Gold}} {{#Icos.Recent.Silver}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_silver">
+                                {{Translations.Silver}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
                             <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
                                 {{Translations.Website}}
                             </a>
-                        </p>
-                        <p>
+                        </td>
+                        <td>
                             <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
                                 {{Translations.Report}}
                             </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Active.Silver}} {{#Icos.Active.Bronze}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_bronze">
-                            {{Translations.Bronze}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{CloseCountDown}}</strong>
-                        </p>
-                        <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
-                            <span style="width:{{Progress}}%"></span>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
+                        </td>
+                    </tr>
+                    {{/Icos.Recent.Silver}} {{#Icos.Recent.Bronze}}
+                    <tr>
+                        <td>
+                            <p class="fxs_partnership fxs_bronze">
+                                {{Translations.Bronze}}
+                            </p>
+                        </td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
                             <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
                                 {{Translations.Website}}
                             </a>
-                        </p>
-                        <p>
+                        </td>
+                        <td>
                             <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
                                 {{Translations.Report}}
                             </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Active.Bronze}} {{#Icos.Active.Basic}}
-                <tr>
-                    <td></td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{CloseCountDown}}</strong>
-                        </p>
-                        <p class="fxs_progressbar {{#Imminent}}fxs_imminent{{/Imminent}}">
-                            <span style="width:{{Progress}}%"></span>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
+                        </td>
+                    </tr>
+                    {{/Icos.Recent.Bronze}} {{#Icos.Recent.Basic}}
+                    <tr>
+                        <td></td>
+                        <td class="fxs_ico_image">
+                            <img src="{{ImageUrl}}" />
+                        </td>
+                        <td class="fxs_partnership">
+                            <p>
+                                <strong>{{Name}}</strong>
+                            </p>
+                            <p>
+                                {{#PartnershipIcons}}
+                                <span class="diamond"></span>
+                                {{/PartnershipIcons}}
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                {{Description}}
+                            </p>
+                        </td>
+                        <td>
                             <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
                                 {{Translations.Website}}
                             </a>
-                        </p>
-                        <p>
+                        </td>
+                        <td>
                             <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
                                 {{Translations.Report}}
                             </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Active.Basic}}
-            </tbody>
-        </table>
-    </div>
-    <div id="upcoming" role="tabpanel" class="tab-pane fade">
-        <table class="fxs_table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>
-                        {{Translations.Ico}}
-                    </th>
-                    <th>
-                    </th>
-                    <th>
-                        {{Translations.ReleaseIn}}
-                    </th>
-                    <th>
-                        {{Translations.Window}}
-                    </th>
-                    <th>
-                        {{Translations.Description}}
-                    </th>
-                    <th>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#Icos.Upcoming.Platinum}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_platinum">
-                            {{Translations.Platinum}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{StartCountDown}}</strong>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                                {{Translations.Website}}
-                            </a>
-                        </p>
-                        <p>
-                            <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                                {{Translations.Report}}
-                            </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Upcoming.Platinum}} {{#Icos.Upcoming.Gold}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_gold">
-                            {{Translations.Gold}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{StartCountDown}}</strong>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                                {{Translations.Website}}
-                            </a>
-                        </p>
-                        <p>
-                            <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                                {{Translations.Report}}
-                            </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Upcoming.Gold}} {{#Icos.Upcoming.Silver}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_silver">
-                            {{Translations.Silver}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{StartCountDown}}</strong>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                                {{Translations.Website}}
-                            </a>
-                        </p>
-                        <p>
-                            <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                                {{Translations.Report}}
-                            </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Upcoming.Silver}} {{#Icos.Upcoming.Bronze}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_bronze">
-                            {{Translations.Bronze}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{StartCountDown}}</strong>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                                {{Translations.Website}}
-                            </a>
-                        </p>
-                        <p>
-                            <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                                {{Translations.Report}}
-                            </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Upcoming.Bronze}} {{#Icos.Upcoming.Basic}}
-                <tr>
-                    <td></td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td class="fxs_countdown">
-                        <p>
-                            <strong>{{StartCountDown}}</strong>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{StartDateLocale}}
-                        </p>
-                        <p>
-                            {{EndDateLocale}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                                {{Translations.Website}}
-                            </a>
-                        </p>
-                        <p>
-                            <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                                {{Translations.Report}}
-                            </a>
-                        </p>
-                    </td>
-                </tr>
-                {{/Icos.Upcoming.Basic}}
-            </tbody>
-        </table>
-    </div>
-    <div id="recent" role="tabpanel" class="tab-pane fade">
-        <table class="fxs_table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>
-                        {{Translations.Ico}}
-                    </th>
-                    <th>
-                    </th>
-                    <th>
-                        {{Translations.Description}}
-                    </th>
-                    <th>
-                    </th>
-                    <th>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#Icos.Recent.Platinum}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_platinum">
-                            {{Translations.Platinum}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                            {{Translations.Website}}
-                        </a>
-                    </td>
-                    <td>
-                        <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                            {{Translations.Report}}
-                        </a>
-                    </td>
-                </tr>
-                {{/Icos.Recent.Platinum}} 
-                {{#Icos.Recent.Gold}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_gold">
-                            {{Translations.Gold}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                            {{Translations.Website}}
-                        </a>
-                    </td>
-                    <td>
-                        <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                            {{Translations.Report}}
-                        </a>
-                    </td>
-                </tr>
-                {{/Icos.Recent.Gold}} {{#Icos.Recent.Silver}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_silver">
-                            {{Translations.Silver}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                            {{Translations.Website}}
-                        </a>
-                    </td>
-                    <td>
-                        <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                            {{Translations.Report}}
-                        </a>
-                    </td>
-                </tr>
-                {{/Icos.Recent.Silver}} {{#Icos.Recent.Bronze}}
-                <tr>
-                    <td>
-                        <p class="fxs_partnership fxs_bronze">
-                            {{Translations.Bronze}}
-                        </p>
-                    </td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                            {{Translations.Website}}
-                        </a>
-                    </td>
-                    <td>
-                        <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                            {{Translations.Report}}
-                        </a>
-                    </td>
-                </tr>
-                {{/Icos.Recent.Bronze}} {{#Icos.Recent.Basic}}
-                <tr>
-                    <td></td>
-                    <td class="fxs_ico_image">
-                        <img src="{{ImageUrl}}" />
-                    </td>
-                    <td class="fxs_partnership">
-                        <p>
-                            <strong>{{Name}}</strong>
-                        </p>
-                        <p>
-                            {{#PartnershipIcons}}
-                            <span class="diamond"></span>
-                            {{/PartnershipIcons}}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            {{Description}}
-                        </p>
-                    </td>
-                    <td>
-                        <a href="{{ICOWeb}}" alt="{{Translations.Website}}" class="fxs_btn fxs_btn_cta fxs_btn_block">
-                            {{Translations.Website}}
-                        </a>
-                    </td>
-                    <td>
-                        <a href="{{ICOReport}}" alt="{{Translations.Report}}" class="fxs_btn fxs_btn_line fxs_btn_block">
-                            {{Translations.Report}}
-                        </a>
-                    </td>
-                </tr>
-                {{/Icos.Recent.Basic}}
-            </tbody>
-        </table>
+                        </td>
+                    </tr>
+                    {{/Icos.Recent.Basic}}
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 </script>
