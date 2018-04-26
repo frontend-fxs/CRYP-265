@@ -174,7 +174,7 @@ var calculateStartCountDown = function(ico) {
 	ico.MillisecondsToStart -= ico.StartCountDownHours * 1000 * 60 * 60;
 	ico.StartCountDownMinutes = parseInt(ico.MillisecondsToStart / (1000 * 60));
 	ico.MillisecondsToStart -= ico.StartCountDownMinutes * 1000 * 60;
-	ico.StartCountDown = ico.StartCountDownDays + 'D ' + ico.StartCountDownHours + 'h ' + ico.StartCountDownMinutes + 'm';
+	ico.StartCountDown = ico.StartCountDownDays + 'd ' + ico.StartCountDownHours + 'h ' + ico.StartCountDownMinutes + 'm';
 	return ico;
 };
 
@@ -185,7 +185,7 @@ var calculateCloseCountDown = function(ico) {
 	ico.MillisecondsToClose -= ico.CloseCountDownHours * 1000 * 60 * 60;
 	ico.CloseCountDownMinutes = parseInt(ico.MillisecondsToClose / (1000 * 60));
 	ico.MillisecondsToClose -= ico.CloseCountDownMinutes * 1000 * 60;
-	ico.CloseCountDown = ico.CloseCountDownDays + 'D ' + ico.CloseCountDownHours + 'h ' + ico.CloseCountDownMinutes+'m';
+	ico.CloseCountDown = ico.CloseCountDownDays + 'd ' + ico.CloseCountDownHours + 'h ' + ico.CloseCountDownMinutes+'m';
 	return ico;
 };
 
