@@ -11,7 +11,7 @@
 	background-color: #f3f3f8;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td {
-	padding: 0;
+	padding: 10px 5px;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td:first-child {
 	width: 0;
