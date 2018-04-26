@@ -11,10 +11,10 @@
 	background-color: #f3f3f8;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td {
-	padding: 20px 10px 10px 10px;
+	padding: 0;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td:first-child {
-	width: 0.1rem;
+	width: 0;
 	position: relative;
 	padding: 0;
 }
@@ -30,16 +30,16 @@
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_partnership{
 	width: 120px;
-	text-align: center;
+	text-align: left;
 
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image {
 	vertical-align: middle;
-	width: 120px;
+	width: 95px;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image img {
-	width: 100px;
-	height: 100px;
+	width: 75px;
+	height: 75px;
 	margin: 10px 0;
 }
 .fxs_calendarico .fxs_table>tbody>tr>td.fxs_countdown{
