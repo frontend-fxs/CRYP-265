@@ -28,6 +28,7 @@
 	margin-bottom: 0.5rem;
 	font-size: 0.8rem;
 	max-width: 150px;
+	float: right;
 }
 @media (min-width: 680px) {
 	.fxs_calendarico .fxs_btn {
