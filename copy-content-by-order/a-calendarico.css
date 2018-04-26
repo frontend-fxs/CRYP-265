@@ -1,16 +1,26 @@
+.fxs_hidden_st_table {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.fxs_hidden_st_table {
+		display: table-cell;
+	}
+}
+
 .fxs_calendarico {
 	width: 100%;
 	clear: both;
 	float: left;
 }
-.fxs_calendarico .fxs_table{
+.fxs_calendarico .fxs_table {
 	width: 100%;
 }
-.fxs_calendarico .fxs_table>tbody>tr:nth-child(even) {
+.fxs_calendarico .fxs_table > tbody > tr:nth-child(even) {
 	background-color: #f3f3f8;
 }
 
-.fxs_calendarico .fxs_table>tbody>tr>td {
+.fxs_calendarico .fxs_table > tbody > tr > td {
 	padding: 5px;
 }
 
@@ -19,37 +29,36 @@
 	padding: 1px 5px;
 	font-weight: 500;
 	font-style: italic;
-	font-size: .8rem;
+	font-size: 0.8rem;
 	transform: rotate(-90deg) translate(-31px, -60px);
 	text-align: center;
-	margin:0;
+	margin: 0;
 }
-.fxs_calendarico .fxs_table>tbody>tr>td.fxs_partnership{
+.fxs_calendarico .fxs_table > tbody > tr > td.fxs_partnership {
 	width: 105px;
 	text-align: left;
-
 }
-.fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image {
+.fxs_calendarico .fxs_table > tbody > tr > td.fxs_ico_image {
 	vertical-align: middle;
 	width: 85px;
-	padding-left:45px;
+	padding-left: 45px;
 }
-.fxs_calendarico .fxs_table>tbody>tr>td.fxs_ico_image img {
+.fxs_calendarico .fxs_table > tbody > tr > td.fxs_ico_image img {
 	width: 75px;
 	height: 75px;
 	margin: 0;
-	margin-top:-17px;
+	margin-top: -17px;
 }
-.fxs_calendarico .fxs_table>tbody>tr>td.fxs_countdown{
-	display:table-cell;
-	width:110px;
+.fxs_calendarico .fxs_table > tbody > tr > td.fxs_countdown {
+	display: table-cell;
+	width: 110px;
 }
 .fxs_calendarico p.fxs_partnership.fxs_platinum {
 	background-color: #49494f;
 }
 
 .fxs_calendarico p.fxs_partnership.fxs_gold {
-	background-color: #deaf37 ;
+	background-color: #deaf37;
 }
 
 .fxs_calendarico p.fxs_partnership.fxs_silver {
@@ -57,7 +66,7 @@
 }
 
 .fxs_calendarico p.fxs_partnership.fxs_bronze {
-	background-color: #cd7f32   ;
+	background-color: #cd7f32;
 }
 
 .fxs_calendarico .diamond {
@@ -85,18 +94,17 @@
 	display: block;
 }
 
-
 .fxs_calendarico .fxs_progressbar.fxs_imminent {
 	width: 100%;
 	float: left;
 	height: 0.9rem;
-	border: 1px solid #D25746;
+	border: 1px solid #d25746;
 	display: block;
 	overflow: hidden;
 }
 
 .fxs_calendarico .fxs_progressbar.fxs_imminent span {
-	background-color: #D25746;
+	background-color: #d25746;
 	float: left;
 	height: 1rem;
 	display: block;
