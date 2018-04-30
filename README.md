@@ -1,2 +1,3 @@
 # CRYP-265
-Mock Calendar ICO
+Simplified Mock Calendar ICO.
+All code in 1 html
