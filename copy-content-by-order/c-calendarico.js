@@ -1,39 +1,6 @@
 var htmlTemplateFile = 'copy-content-by-order/d-mustache.html';
 var icos = [];
 
-var randomIcosRaw = function() {
-	for (var i = 0; i < 50; i++) {
-		icosRaw.push({
-			PartnershipLevel: Math.floor(Math.random() * 5) + 1,
-			Name: 'Votem',
-			Description: function(){
-				var times = Math.floor(Math.random() * 5) +1;
-				var description = '';
-				for (var index = 0; index < times; index++) {
-					description += 'Voting for a mobile world ';
-				}
-				return description;
-			},				
-			StartDate: {
-				Year: Math.floor(Math.random() * 3) + 2017,
-				Month: Math.floor(Math.random() * 12) + 1,
-				Day: Math.floor(Math.random() * 28) + 1,
-			},
-			EndDate: {
-				Year: Math.floor(Math.random() * 3) + 2017,
-				Month: Math.floor(Math.random() * 12) + 1,
-				Day: Math.floor(Math.random() * 28) + 1,
-			},
-			ImageUrl: 'https://tokenmarket.net/blockchain-static/ethereum/assets/votem/logo_small.png',
-			ICOWeb: 'https://www.votem.io/',
-			ICOReport: 'https://votem.com/our-story/',
-			FXPage: 'https://www.fxstreet.com/',
-		});
-	}
-
-	return icosRaw;
-};
-
 var dinamicVars = {
 	Icos: {
 		Active: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] },
@@ -235,7 +202,6 @@ var initDinamicVars = function() {
 };
 
 var htmlRender = function() {
-	randomIcosRaw();
 	initDinamicVars();
 	$('#target').load(htmlTemplateFile, function() {
 		var template = document.getElementById('icoCalendarTemplate').innerHTML;
@@ -247,5 +213,7 @@ var htmlRender = function() {
 htmlRender();
 
 setInterval(function() {
+	var icos = [];
+	var dinamicVars = { Icos: { Active: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] }, Upcoming: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] }, Recent: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] } }, Translations: {} };
 	htmlRender();
 }, 60000);
