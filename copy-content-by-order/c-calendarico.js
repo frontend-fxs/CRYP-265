@@ -11,24 +11,24 @@ var dinamicVars = {
 };
 
 var isEndedIco = function(ico) {
-	var isEnded = ico.EndDate.getTime() < dinamicVars.Now.getTime();
+	var isEnded = ico.EndDateObj.getTime() < dinamicVars.Now.getTime();
 	return isEnded;
 };
 
 var isStartedIco = function(ico) {
-	var isStarted = ico.StartDate.getTime() < dinamicVars.Now.getTime();
+	var isStarted = ico.StartDateObj.getTime() < dinamicVars.Now.getTime();
 	return isStarted;
 };
 
 var sortByEndDate = function(icos) {
 	icos.sort(function(a, b) {
-		return a.EndDate.getTime() - b.EndDate.getTime();
+		return a.EndDateObj.getTime() - b.EndDateObj.getTime();
 	});
 };
 
 var sortByStartDate = function(icos) {
 	icos.sort(function(a, b) {
-		return a.StartDate.getTime() - b.StartDate.getTime();
+		return a.StartDateObj.getTime() - b.StartDateObj.getTime();
 	});
 };
 
@@ -156,7 +156,7 @@ var calculateCloseCountDown = function(ico) {
 };
 
 var formatStartDateToLocale = function(ico) {
-	ico.StartDateLocale = ico.StartDate.toLocaleDateString('en-EN', {
+	ico.StartDateLocale = ico.StartDateObj.toLocaleDateString('en-EN', {
 		day: 'numeric',
 		month: 'numeric',
 		year: 'numeric',
@@ -165,7 +165,7 @@ var formatStartDateToLocale = function(ico) {
 };
 
 var formatEndDateToLocale = function(ico) {
-	ico.EndDateLocale = ico.EndDate.toLocaleDateString('en-EN', {
+	ico.EndDateLocale = ico.EndDateObj.toLocaleDateString('en-EN', {
 		day: 'numeric',
 		month: 'numeric',
 		year: 'numeric',
