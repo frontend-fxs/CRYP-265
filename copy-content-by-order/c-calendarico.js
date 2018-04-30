@@ -116,14 +116,13 @@ var createPartnershipIcons = function(ico) {
 };
 
 var initTimeVars = function(ico) {
-	ico.StartDate = new Date(ico.StartDate.Year, ico.StartDate.Month - 1, ico.StartDate.Day);
-	ico.MillisecondsToStart = ico.StartDate.getTime() - dinamicVars.Now.getTime();
-	ico.EndDate = new Date(ico.EndDate.Year, ico.EndDate.Month - 1, ico.EndDate.Day);
-	ico.MillisecondsToClose =
-		!isEndedIco(ico) && isStartedIco(ico) && ico.EndDate.getTime() - dinamicVars.Now.getTime();
+	ico.StartDateObj = new Date(ico.StartDate.Year, ico.StartDate.Month - 1, ico.StartDate.Day);
+	ico.MillisecondsToStart = ico.StartDateObj.getTime() - dinamicVars.Now.getTime();
+	ico.EndDateObj = new Date(ico.EndDate.Year, ico.EndDate.Month - 1, ico.EndDate.Day);
+	ico.MillisecondsToClose = !isEndedIco(ico) && isStartedIco(ico) && ico.EndDateObj.getTime() - dinamicVars.Now.getTime();
 	ico.MillisecondsDuration = ico.MillisecondsToClose - ico.MillisecondsToStart;
 	ico.MillisecondsElapsed = ico.MillisecondsToStart * -1;
-	if ((ico.EndDate.getTime() - dinamicVars.Now.getTime()) < (3*24*60*60*1000)) {
+	if (ico.EndDateObj.getTime() - dinamicVars.Now.getTime() < 3 * 24 * 60 * 60 * 1000) {
 		ico.Imminent = true;
 	}
 	return ico;
