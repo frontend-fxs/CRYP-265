@@ -80,6 +80,7 @@
 .fxs_calendarico .fxs_table > tbody > tr > td.fxs_window {
 	text-align: center;
 	white-space: normal;
+	line-height: .8rem;
 }
 
 @media(min-width:1480px){
