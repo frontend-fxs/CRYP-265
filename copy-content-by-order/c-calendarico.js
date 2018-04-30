@@ -215,4 +215,4 @@ setInterval(function() {
 	var icos = [];
 	var dinamicVars = { Icos: { Active: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] }, Upcoming: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] }, Recent: { Platinum: [], Gold: [], Silver: [], Bronze: [], Basic: [] } }, Translations: {} };
 	htmlRender();
-}, 1000);
+}, 10000);
