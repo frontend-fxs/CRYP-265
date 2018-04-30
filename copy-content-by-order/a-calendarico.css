@@ -21,7 +21,6 @@
 }
 @media (min-width: 680px) {
 	.fxs_calendarico p {
-		margin-bottom: 0.92rem;
 		font-size: 0.92rem;
 	}
 }
@@ -78,9 +77,16 @@
 .fxs_calendarico .fxs_table > tbody > tr > td.fxs_partnership {
 	display: none;
 }
-.fxs_calendarico .fxs_table > thead > tr > th.fxs_window,
 .fxs_calendarico .fxs_table > tbody > tr > td.fxs_window {
 	text-align: center;
+	white-space: normal;
+}
+
+@media(min-width:1480px){
+.fxs_calendarico .fxs_table > tbody > tr > td.fxs_window {
+	white-space: nowrap;
+}
+
 }
 
 @media (min-width: 375px) {
