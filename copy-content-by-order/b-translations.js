@@ -6,7 +6,7 @@
 		Ico: 'ICO',
 		TimeLeft: 'TIME LEFT',
 		ReleaseIn: 'RELEASE IN',
-		Window: 'WINDOW',
+		Window: 'START END DATE',
 		Description: 'DESCRIPTION',
 		Platinum: 'PLATINUM',
 		Gold: 'GOLD',
