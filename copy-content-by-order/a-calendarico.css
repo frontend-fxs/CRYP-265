@@ -103,8 +103,9 @@
 
 .fxs_calendarico .fxs_table > tbody > tr > td.fxs_ico_image {
 	vertical-align: middle;
-	width: 85px;
+	width: 130px;
 	padding-left: 45px;
+	padding-top: 27px;
 }
 .fxs_calendarico .fxs_table > tbody > tr > td.fxs_ico_image img {
 	width: 50px;
